@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rmaa-ai-website
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000

@@ -1,0 +1,17 @@
+.git
+.gitignore
+.env
+*.local
+Private/
+Ahyeon/weights_parts/
+Wohnee/weights_parts/
+*.gguf
+*.bin
+*.pt
+cache_models/
+models_cache/
+node_modules/
+Website/node_modules/
+__pycache__/
+*.log
+unified.db
