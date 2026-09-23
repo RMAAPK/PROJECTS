@@ -418,6 +418,35 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
+// ============================================================================
+// AUTONOMOUS RENDER FREE-TIER KEEP-ALIVE SENTINEL (Pings every 10 minutes)
+// ============================================================================
+function startKeepAliveSentinel() {
+  const PING_INTERVAL_MS = 10 * 60 * 1000; // Exactly 10 minutes (prevents 15m idle sleep)
+  const targetHost = process.env.RENDER_EXTERNAL_URL || 'https://rmaa.pk';
+
+  console.log(`[Keep-Alive Sentinel] Initialized for Render Free Tier Web Service.`);
+  console.log(`[Keep-Alive Sentinel] Automated self-ping armed: ${targetHost}/ping every 10 minutes.`);
+
+  const executeHeartbeat = () => {
+    const url = `${targetHost}/ping`;
+    const client = url.startsWith('https') ? require('https') : require('http');
+
+    client.get(url, (res) => {
+      console.log(`[Keep-Alive Sentinel] Autonomous ping successful: ${url} (HTTP ${res.statusCode}) at ${new Date().toISOString()}`);
+    }).on('error', (err) => {
+      console.warn(`[Keep-Alive Sentinel] External self-ping warning: ${err.message}. Triggering local fallback...`);
+      require('http').get(`http://127.0.0.1:${PORT}/healthz`, (localRes) => {
+        console.log(`[Keep-Alive Sentinel] Local fallback ping healthy: HTTP ${localRes.statusCode}`);
+      }).on('error', () => {});
+    });
+  };
+
+  // First ping 30s after startup, then every 10 minutes continuously
+  setTimeout(executeHeartbeat, 30 * 1000);
+  setInterval(executeHeartbeat, PING_INTERVAL_MS);
+}
+
 app.listen(PORT, HOST, () => {
   console.log(`[Ali CNC] Personal Web Service running on http://${HOST}:${PORT}`);
   console.log(`[Ali CNC] Ready for Render Web Services health checks at /healthz`);
@@ -426,4 +455,7 @@ app.listen(PORT, HOST, () => {
   // Automated Google Sitemap Ping on boot
   const sitemapUrl = 'https://rmaa.pk/sitemap.xml';
   pingGoogle(sitemapUrl);
+
+  // Launch the autonomous 10-minute Render self-ping keep-alive
+  startKeepAliveSentinel();
 });
