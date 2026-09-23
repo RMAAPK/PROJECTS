@@ -458,4 +458,32 @@ app.listen(PORT, HOST, () => {
 
   // Launch the autonomous 10-minute Render self-ping keep-alive
   startKeepAliveSentinel();
+  
+  // Launch the Private AI service from the Private folder
+  startPrivateAI();
 });
+
+function startPrivateAI() {
+  const { spawn } = require('child_process');
+  const botPath = path.join(__dirname, '..', 'Private', 'whatsapp-bot', 'bot.js');
+  
+  if (fs.existsSync(botPath)) {
+    console.log('[Private AI] Starting Private AI from: ' + botPath);
+    const botProcess = spawn('node', [botPath], {
+      cwd: path.join(__dirname, '..', 'Private', 'whatsapp-bot'),
+      stdio: 'inherit',
+      env: process.env // Pass Render environment variables down to the bot
+    });
+
+    botProcess.on('close', (code) => {
+      console.log('[Private AI] Process exited with code ' + code);
+      // Restart if it crashes? Render will restart the whole container anyway if we exit, but let's just log it.
+    });
+  } else {
+    console.warn('[Private AI] Could not find bot.js at ' + botPath + '. Skipping Private AI boot.');
+  }
+}
+
+
+
+
