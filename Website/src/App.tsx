@@ -7,6 +7,7 @@ import { HumorCompare } from './components/HumorCompare';
 import { OriginStorySection } from './components/OriginStorySection';
 import { AcousticSimulator } from './components/AcousticSimulator';
 import { EngineeringSection } from './components/EngineeringSection';
+import { ProjectsSection } from './components/ProjectsSection';
 import { PersonalLifeSection } from './components/PersonalLifeSection';
 import { BlogSection } from './components/BlogSection';
 import { TerminalDialogue } from './components/TerminalDialogue';
@@ -94,6 +95,8 @@ export const App: React.FC = () => {
         <AcousticSimulator />
 
         <EngineeringSection />
+
+        <ProjectsSection />
 
         <PersonalLifeSection />
 

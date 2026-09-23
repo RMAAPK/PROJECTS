@@ -1,0 +1,40 @@
+================================================================================
+RMAA AI WEBSITE PATCH DOCUMENTATION & MANIFEST (v2.0)
+Domain: https://rmaa.pk | Contact: say@rmaa.pk | GitHub: RMAAPK/PROJECTS
+================================================================================
+
+1. OVERVIEW OF CHANGES:
+   - Added dedicated `ProjectsSection.tsx` component showcasing all 9 RMAA AI products:
+     * RMAA AI Ahyeon (BABYMONSTER Idol Engine - Active & Verified)
+     * RMAA AI Wohnee (ILLIT Idol Engine - Active & Verified)
+     * RMAA AI Web Hub (Frontend Platform - Live Production)
+     * RMAA AI Trading Bot (Quantitative Sentinel - In Queue)
+     * RMAA AI Product Scout (E-Commerce Intelligence - In Queue)
+     * RMAA AI Sniper (High-Frequency Harvester - In Queue)
+     * RMAA AI Food (Culinary Intelligence - In Queue)
+     * RMAA AI Lawer (Legal Contract Parser - In Queue)
+     * RMAA AI Drama Buddy (Narrative Companion - In Queue)
+   - Integrated `<ProjectsSection />` directly into `src/App.tsx`.
+   - Updated `src/components/Navbar.tsx` with direct link to "RMAA AI (9)".
+   - Expanded blog library from 52 posts to 557 comprehensive technical entries.
+   - Updated Navbar blog pill from `Blog (52)` to `Blog (557)`.
+   - Synchronized all 557 blogs into root `unified.db`.
+
+2. COMPILED ASSETS:
+   - Built successfully via `tsc && vite build`:
+     * dist/index.html (5.92 kB)
+     * dist/assets/index-oA61U_Ff.js (1,580.37 kB)
+
+3. RENDER DEPLOYMENT SPECIFICATION:
+   - Service Type: Static Web Site / Node Web Service
+   - Root Directory: Website
+   - Build Command: npm run build
+   - Publish Directory: dist
+   - Routing: SPA fallback to index.html for all subroutes (/blog/*, /projects/*)
+   - Environment Variables:
+     * VITE_API_URL=http://localhost:11434/api/chat
+     * VITE_MODEL_NAME=ahyeon
+
+================================================================================
+END OF MANIFEST
+================================================================================
