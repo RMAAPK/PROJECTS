@@ -1,0 +1,30 @@
+export const theme = {
+  colors: {
+    bg: '#090A0F',
+    bgCard: '#11131B',
+    bgCardHover: '#161924',
+    border: '#1E2230',
+    borderLight: '#2B3145',
+    cyan: '#38BDF8',
+    cyanGlow: 'rgba(56, 189, 248, 0.15)',
+    emerald: '#10B981',
+    emeraldGlow: 'rgba(16, 185, 129, 0.15)',
+    violet: '#A855F7',
+    violetGlow: 'rgba(168, 85, 247, 0.15)',
+    amber: '#F59E0B',
+    rose: '#F43F5E',
+    textPrimary: '#F3F4F6',
+    textSecondary: '#9CA3AF',
+    textMuted: '#6B7280',
+  },
+  fonts: {
+    heading: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+    mono: "'Fira Code', monospace",
+  },
+  radii: {
+    sm: 6,
+    md: 10,
+    lg: 16,
+    full: 9999,
+  },
+};
