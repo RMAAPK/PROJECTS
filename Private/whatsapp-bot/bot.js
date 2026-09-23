@@ -166,26 +166,6 @@ function detectHandledChatIntent(text) {
   return { isHandledIntent: false };
 }
 
-// Cloud Production Auto-Restore
-if (!fs.existsSync(path.join(AUTH_DIR, "creds.json"))) {
-  if (process.env.WHATSAPP_SESSION_BASE64) {
-    console.log("[Production Boot] Restoring session from WHATSAPP_SESSION_BASE64...");
-    restoreSession(process.env.WHATSAPP_SESSION_BASE64, AUTH_DIR);
-  } else if (fs.existsSync(path.join(__dirname, "whatsapp_session_bundle.json"))) {
-    console.log("[Production Boot] Restoring session from whatsapp_session_bundle.json...");
-    try {
-      const bundle = JSON.parse(fs.readFileSync(path.join(__dirname, "whatsapp_session_bundle.json"), "utf-8"));
-      if (!fs.existsSync(AUTH_DIR)) fs.mkdirSync(AUTH_DIR, { recursive: true });
-      for (const [f, c] of Object.entries(bundle)) {
-        fs.writeFileSync(path.join(AUTH_DIR, f), c, "utf-8");
-      }
-      console.log(`[Production Boot] Restored ${Object.keys(bundle).length} auth files.`);
-    } catch (e) {
-      console.error("[Production Boot Error]:", e.message);
-    }
-  }
-}
-
 // Web Dashboard Server
 const http = require("http");
 const { getStatusHtml } = require("./status_page");
