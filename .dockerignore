@@ -2,7 +2,9 @@
 .gitignore
 .env
 *.local
-Private/
+Private/.env
+Private/whatsapp-bot/auth_info_baileys/
+Private/whatsapp-bot/whatsapp_session*
 Ahyeon/weights_parts/
 Wohnee/weights_parts/
 *.gguf
