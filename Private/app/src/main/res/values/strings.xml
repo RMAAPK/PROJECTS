@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ali CNC Private CEO AI</string>
+    <string name="app_short_name">PAI CEO</string>
+    <string name="tagline">Sector F-11 • Solo Founder Copilot</string>
+    <string name="status_online">Replicate LLM • 100% Private</string>
+    <string name="hint_input">Ask Ali CNC CEO AI...</string>
+    <string name="shizuku_active">Shizuku UID 2000 Active</string>
+    <string name="vault_secured">AES-256 Vault Armed</string>
+</resources>

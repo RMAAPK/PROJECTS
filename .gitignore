@@ -1,7 +1,10 @@
 # Environment & Secrets (CRITICAL: NEVER COMMIT)
 .env
 *.local
-Private/
+# Private Secrets
+Private/.env
+Private/whatsapp-bot/auth_info_baileys/
+Private/whatsapp-bot/whatsapp_session*
 
 # Model Weight Binaries (>100MB limit, HuggingFace hosted)
 *.gguf

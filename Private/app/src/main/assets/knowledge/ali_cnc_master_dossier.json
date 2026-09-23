@@ -1,0 +1,55 @@
+{
+  "system": "Ali CNC Private CEO AI",
+  "version": "1.0.0",
+  "founder": {
+    "name": "Raja Muhammad Ali Asghar",
+    "alias": "Ali CNC / Muhammad Ali",
+    "dob": "December 24, 2003",
+    "age": 22,
+    "location": "Rawalpindi / Sector F-11, Islamabad, Pakistan",
+    "typology": "INTJ (Mastermind / Architect)",
+    "iq_estimate": "150+",
+    "origin": "Started programming at age 4, hardware assembly at age 7, professional CNC designing on Sep 7, 2025",
+    "certifications": [
+      "TITANS of CNC Academy TITAN-2M Credential",
+      "TITANS of CNC Academy TITAN-3M Credential",
+      "Pakistan Software Export Board (PSEB) Registered"
+    ],
+    "company_domains": ["alicnc.pk", "forge.alicnc.pk"]
+  },
+  "workshop_network": {
+    "mentor_and_boss": "Iftikhar Bhai (Senior Woodworking & Precision Routing Craftsman, Sector F-11)",
+    "father": "Raja Ghulam Asghar Abbasi (Former President / Saddar of Tajran Traders Association, Pindora)",
+    "cousin": "Haseeb (Rawalpindi, caretaker of Fargo)",
+    "family_dog": "Fargo (German Shepherd, tracked daily)",
+    "workshop_crew": ["Muneeb", "Usama", "Merab", "Chacha"],
+    "historical_shops": ["Welcome Edge Cutting", "Umer Al Khairy CNC", "Consolidated under Ali CNC"]
+  },
+  "hardware_ecosystem": {
+    "cnc_router": "Hefei Mingda 1325 (3-Axis Industrial Wood Router)",
+    "controller_hardware": "Weihong PCIMC-3D PCI Motion Control Interface (DB15 J1 connector, WCH CH365 PCI)",
+    "controller_software": "NcStudio v5.56 / v8",
+    "spindle_specs": "3.2 kW / 5.5 kW Water-Cooled Spindle, 6,000 - 24,000 RPM",
+    "materials_machined": ["MDF", "Lasani", "HDF", "HDX", "Super-gloss acrylic", "Solid Sheesham", "Oak", "Commercial Laminates"],
+    "3d_printer": "Bambu Lab A1 (Bambu Studio, multi-color prototypes, custom jigs)",
+    "wireless_pendant": "Custom ESP32 / NodeMCU Bluetooth Remote communicating with Python Windows service"
+  },
+  "dsp_acoustics_forge_ai": {
+    "tooth_pass_formula": "f_tp = (RPM * Flutes) / 60",
+    "example_calculation": "18000 RPM * 2 flutes / 60 = 600 Hz tooth-pass fundamental",
+    "chatter_harmonic_threshold": "2.4 kHz spike indicates regenerative chatter",
+    "override_mechanism": "ForgeAI_NcStudio_Defense.exe dispatches Win32 WM_KEYDOWN VK_NEXT (PageDown) in < 5ms to drop feed rate 100% -> 25%"
+  },
+  "trademarks": [
+    { "mark": "ALI CNC", "class": 42, "app_no": "890258", "service": "CAD, 3D modeling, engineering design" },
+    { "mark": "AHYEON", "class": 9, "app_no": "890259", "service": "Digital media, downloads, software" }
+  ],
+  "cultural_interests": {
+    "ultimate_biases": ["BIBI (Kim Hyung-seo)", "Jung Ahyeon (BABYMONSTER)"],
+    "additional_biases": ["Jennie", "Lisa", "Rosé", "Jisoo"],
+    "groups": ["BABYMONSTER", "BLACKPINK", "ILLIT", "LE SSERAFIM", "TWICE", "NewJeans", "IVE"],
+    "kdramas": "500+ series completed (Itaewon Class, Queen Seondeok, The Woman Who Swallowed the Sun; Suzy, Jisoo, IU)",
+    "motorsports": "Formula 1 Grand Prix",
+    "strategy_gaming": "Age of Mythology custom map & trigger script designer"
+  }
+}

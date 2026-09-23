@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/assistant_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000">
+
+    <!-- Outside touch dismiss view -->
+    <View
+        android:id="@+id/view_scrim_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_sheet_container" />
+
+    <!-- Bottom Sheet Modal Container -->
+    <LinearLayout
+        android:id="@+id/bottom_sheet_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bubble_assistant"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="16dp">
+
+        <!-- Top Drag Handle & Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="PAI Logo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ali CNC CEO AI"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POCO C85 • Native Assistant Mode"
+                    android:textColor="@color/accent_emerald"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_close_assistant"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="✕"
+                android:textColor="@color/text_secondary"
+                android:background="@null"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Dynamic Scrollable Assistant Response Area -->
+        <ScrollView
+            android:id="@+id/scroll_assistant_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="180dp"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_assistant_output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Online, Ali. Sector F-11 workshop &amp; machines ready."
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp" />
+        </ScrollView>
+
+        <!-- Input Bar with Send Button (Pinned above Keyboard) -->
+        <LinearLayout
+            android:id="@+id/assistant_input_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_assistant_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Type directive to CEO AI..."
+                android:textColorHint="@color/text_muted"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/bg_glass_input"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:textSize="13sp"
+                android:inputType="textCapSentences"
+                android:imeOptions="actionSend|flagNoExtractUi" />
+
+            <Button
+                android:id="@+id/btn_assistant_send"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="10dp"
+                android:text="➤"
+                android:textColor="#041E49"
+                android:background="@drawable/btn_send"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

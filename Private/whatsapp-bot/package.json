@@ -1,0 +1,15 @@
+{
+  "name": "alicnc-whatsapp-copilot",
+  "version": "1.0.0",
+  "description": "Ali CNC Private CEO AI - WhatsApp Linked Device Bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.9",
+    "dotenv": "^16.6.1",
+    "pino": "^9.6.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}

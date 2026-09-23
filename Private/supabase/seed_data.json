@@ -1,0 +1,177 @@
+[
+  {
+    "category": "identity",
+    "sneak_key": "ALI_IDENTITY",
+    "title": "Primary Identity & Demographics",
+    "content": "Raja Muhammad Ali Asghar, operating professionally as Ali CNC (also known as Muhammad Ali). Born December 24, 2003 (Age 22 as of 2026). Pakistani national, resident of Rawalpindi, maintaining workshop operations in Sector F-11, Islamabad. INTJ typology (Mastermind / Architect). 2D / 2.5D / 3D CAD/CAM Designer, 3-Axis CNC Router Operator & Programmer, and Additive Manufacturing Specialist. Started professional CNC designing and machining on September 7, 2025.",
+    "metadata": { "name": "Raja Muhammad Ali Asghar", "alias": "Ali CNC", "dob": "2003-12-24", "location": "Rawalpindi / Sector F-11 Islamabad", "personality": "INTJ" }
+  },
+  {
+    "category": "workshop",
+    "sneak_key": "IFTIKHAR_MENTOR_BOSS",
+    "title": "Workshop Mentor & Boss: Iftikhar Bhai",
+    "content": "Iftikhar (Iftikhar Bhai) is Ali CNC's workshop mentor and boss in Sector F-11, Islamabad. Senior woodworking and precision CNC router craftsman. Regarded as a primary father figure, technical guide, and authority in precision routing, tooling tolerances, and workshop discipline.",
+    "metadata": { "role": "Mentor & Boss", "relation": "Senior Woodworking Craftsman", "location": "Sector F-11, Islamabad" }
+  },
+  {
+    "category": "workshop",
+    "sneak_key": "GHULAM_ASGHAR_FATHER",
+    "title": "Father: Raja Ghulam Asghar Abbasi",
+    "content": "Ghulam Asghar (Raja Ghulam Asghar Abbasi) is Ali's father. A prominent and respected local figure who served as President (Saddar) of the Tajran (Traders Association) in Pindora, Rawalpindi.",
+    "metadata": { "role": "Father", "title": "Saddar Tajran (Traders Association)", "location": "Pindora, Rawalpindi" }
+  },
+  {
+    "category": "workshop",
+    "sneak_key": "HASEEB_FARGO_DOG",
+    "title": "Cousin Haseeb & Fargo the German Shepherd",
+    "content": "Haseeb is Ali's close cousin and the primary caretaker of Fargo, the family German Shepherd dog cared for in Rawalpindi. Frequent subject of communication tracking, ledger items, and daily updates.",
+    "metadata": { "relation": "Close Cousin", "dog": "Fargo (German Shepherd)", "location": "Rawalpindi" }
+  },
+  {
+    "category": "workshop",
+    "sneak_key": "WORKSHOP_CREW_F11",
+    "title": "Sector F-11 Workshop Crew",
+    "content": "The daily operating crew in the Sector F-11 Islamabad CNC workshop consists of Muneeb, Usama, Merab, and Chacha. Team includes machine operators, trainees, associates, and senior woodworking coworkers.",
+    "metadata": { "team": ["Muneeb", "Usama", "Merab", "Chacha"], "location": "Sector F-11 Workshop" }
+  },
+  {
+    "category": "hardware",
+    "sneak_key": "MINGDA_1325_CNC",
+    "title": "Hefei Mingda 1325 3-Axis Industrial Wood Router",
+    "content": "Primary production machine: Hefei Mingda 1325 (3-Axis Industrial Wood Router). Motion control interface: NC Studio (PCI card controller). Machining media: MDF, Lasani, HDF, HDX, super-gloss acrylic, laminate panels, and hardwoods. Tooling: Flat end mills, V-carve bits (60 deg, 90 deg), and 6mm ball nose bits for 3D relief climb finishing.",
+    "metadata": { "model": "Hefei Mingda 1325", "axes": 3, "controller": "NC Studio", "materials": ["MDF", "Lasani", "HDF", "HDX", "Super-gloss acrylic", "Hardwoods"] }
+  },
+  {
+    "category": "hardware",
+    "sneak_key": "BAMBU_A1_PRINTER",
+    "title": "Bambu Lab A1 3D Printer",
+    "content": "Additive manufacturing rig: Bambu Lab A1 3D Printer running Bambu Studio for slicer optimization, multi-color prototypes, custom jigs, and rapid fabrication testing.",
+    "metadata": { "rig": "Bambu Lab A1", "slicer": "Bambu Studio", "technology": "FDM 3D Printing" }
+  },
+  {
+    "category": "hardware",
+    "sneak_key": "ESP32_NCSTUDIO_PENDANT",
+    "title": "ESP32 Wireless NC Studio Remote Pendant",
+    "content": "Custom hardware engineering project: Engineered an ESP32 / NodeMCU wireless Bluetooth remote pendant communicating with a custom Python background service on Windows to control NC Studio wirelessly across the workshop floor.",
+    "metadata": { "mcu": "ESP32 / NodeMCU", "protocol": "Bluetooth LE / Serial", "software": "Custom Python Windows Service", "target": "NC Studio" }
+  },
+  {
+    "category": "software",
+    "sneak_key": "CAD_CAM_STACK",
+    "title": "CAD/CAM & Digital Engineering Software Stack",
+    "content": "Core engineering software: Vectric Aspire (primary CAM / toolpaths), Onshape 3D (parametric CAD), Vector Magic Pro (vectorization), Adobe Illustrator, KiCad EDA (PCB design), KeyShot (photorealistic rendering), CAMotics (toolpath simulation), PTC Creo, Siemens NX, Fusion 360, and AutoCAD.",
+    "metadata": { "cam": "Vectric Aspire", "cad": "Onshape 3D, Fusion 360, Creo, NX", "eda": "KiCad", "graphics": "Adobe Illustrator, Vector Magic" }
+  },
+  {
+    "category": "software",
+    "sneak_key": "SVGV_FORMAT_ENCODER",
+    "title": "SVGV Experimental Binary Vector Format",
+    "content": "Engineered encoder.js: an experimental proprietary binary vector format (SVGV) utilizing custom opcodes, 16-bit delta coordinates, mesh gradients, and raster patches for ultra-compact 2D/3D graphic interchange.",
+    "metadata": { "project": "SVGV Format", "file": "encoder.js", "features": ["opcodes", "16-bit delta coordinates", "mesh gradients", "raster patches"] }
+  },
+  {
+    "category": "software",
+    "sneak_key": "ALICNC_WEB_OPS",
+    "title": "Ali CNC Web Infrastructure & Domain Operations",
+    "content": "Secured primary web domain alicnc.pk configured with Cloudflare DNS, Vercel edge deployments, Zoho Mail MX/SPF/DKIM mail authentication records, and DMCA.com content protection badges.",
+    "metadata": { "domain": "alicnc.pk", "dns": "Cloudflare", "hosting": "Vercel", "email": "Zoho Mail", "protection": "DMCA.com" }
+  },
+  {
+    "category": "hardware",
+    "sneak_key": "POCO_C85_TERMUX",
+    "title": "POCO C85 HyperOS Mobile Automation Rig",
+    "content": "Personal mobile device: POCO C85 running Xiaomi HyperOS. Powered with Termux, Onshape Mobile, VLC, and MPV. Equipped with KZ Castor Pro (Bass Edition) IEMs driven by a Conexant CX31993 USB-C DAC dongle, calibrated via Google Sound Amplifier and Poweramp Equalizer custom parametric EQ profiles.",
+    "metadata": { "device": "POCO C85", "os": "Xiaomi HyperOS", "tools": ["Termux", "Onshape Mobile"], "audio": "KZ Castor Pro Bass + CX31993 DAC" }
+  },
+  {
+    "category": "projects",
+    "sneak_key": "TRADEMARK_ALI_CNC",
+    "title": "TM-01 Trademark Application: ALI CNC",
+    "content": "June 2026: Filed official Class 42 trademark application with IPO Pakistan covering CAD, 3D modeling, and engineering design services under the mark ALI CNC. Formally responded to examination notices in August 2026 (Application No. 890258).",
+    "metadata": { "class": "Class 42", "app_no": "890258", "authority": "IPO Pakistan", "service": "CAD / 3D Modeling / Engineering" }
+  },
+  {
+    "category": "projects",
+    "sneak_key": "HEXAGON_NESTING_80",
+    "title": "80 Hexagon Interlocking Nesting in Vectric Aspire",
+    "content": "July 2026: Engineered zero-waste puzzle interlocking nesting algorithm in Vectric Aspire, successfully machining 80 identical interlocking MDF hexagons on a single sheet with zero material waste.",
+    "metadata": { "software": "Vectric Aspire", "material": "MDF", "output": "80 Interlocking Hexagons", "efficiency": "Zero-Waste Nesting" }
+  },
+  {
+    "category": "projects",
+    "sneak_key": "TRADEMARK_AHYEON",
+    "title": "TM-01 Trademark Application: AHYEON",
+    "content": "July 2026: Submitted official trademark application with IPO Pakistan under Class 9 for digital media and digital downloads under the mark AHYEON.",
+    "metadata": { "class": "Class 9", "authority": "IPO Pakistan", "category": "Digital Media & Downloads" }
+  },
+  {
+    "category": "projects",
+    "sneak_key": "LION_HEAD_3D_CARVE",
+    "title": "Lion Head 3D Relief Multi-Layer Carving",
+    "content": "July 2026: Generated detailed 3D mesh model using Hunyuan3D-2; engineered multi-layer slicing and toolpaths in Vectric Aspire for 3-axis CNC router execution with 6mm ball nose climb milling.",
+    "metadata": { "ai_model": "Hunyuan3D-2", "cam": "Vectric Aspire", "tool": "6mm Ball Nose", "subject": "Lion Head Relief" }
+  },
+  {
+    "category": "projects",
+    "sneak_key": "INVERTED_V_QR_CODE",
+    "title": "Functional Inverted V-Carve QR Code in MDF",
+    "content": "August 2026: Converted, vectorized, and carved a scannable optical QR code panel in MDF using Vector Magic Pro, Adobe Illustrator, and Vectric Aspire with inverted V-bit geometry.",
+    "metadata": { "type": "Scannable QR Panel", "technique": "Inverted V-Carve", "tools": ["Vector Magic", "Illustrator", "Aspire"] }
+  },
+  {
+    "category": "projects",
+    "sneak_key": "CDA_FLOODING_ACTION",
+    "title": "Municipal Civic Action: CDA / MCI Road Flooding Complaint",
+    "content": "August 2026: Lodged formal civic petition and complaint with Capital Development Authority (CDA) and Municipal Corporation Islamabad (MCI) regarding severe storm water road flooding outside the Sector F-11 workshop.",
+    "metadata": { "target": "CDA / MCI", "issue": "Storm water road flooding", "location": "Sector F-11 Workshop Street" }
+  },
+  {
+    "category": "projects",
+    "sneak_key": "FORGE_AI_YC_W27",
+    "title": "Forge AI - Y Combinator W27 Application",
+    "content": "September 2026: Authored Y Combinator W27 founder application and one-minute video pitch for Forge AI—an AI-driven predictive tool breakage and spindle protection system for CNC routers using real-time sensor and acoustic analysis.",
+    "metadata": { "venture": "Forge AI", "program": "Y Combinator W27", "technology": "Predictive Tool Breakage / Spindle Protection" }
+  },
+  {
+    "category": "interests",
+    "sneak_key": "KPOP_BIASES_GROUPS",
+    "title": "K-Pop Ultimate Biases & Girl Groups",
+    "content": "Ultimate Biases: BIBI (Kim Hyung-seo, admired for raw authenticity and genuine engagement) and Jung Ahyeon (정아현 of BABYMONSTER). Additional biases: Jennie (2nd bias), Lisa (original bias), Rosé, Jisoo. Follows BABYMONSTER, BLACKPINK, ILLIT, LE SSERAFIM, TWICE, NewJeans, and IVE. Platforms: Spotify, YouTube Music, Weverse.",
+    "metadata": { "ultimate_biases": ["BIBI", "Jung Ahyeon (BABYMONSTER)"], "biases": ["Jennie", "Lisa", "Rosé", "Jisoo"], "groups": ["BABYMONSTER", "BLACKPINK", "ILLIT", "LE SSERAFIM", "TWICE", "NewJeans", "IVE"] }
+  },
+  {
+    "category": "interests",
+    "sneak_key": "KDRAMA_500_LOG",
+    "title": "Korean Dramas & Cinema (500+ Completed)",
+    "content": "Completed over 500+ Korean drama series. Key favorite titles include Itaewon Class, Queen Seondeok, and The Woman Who Swallowed the Sun. Highest admiration for actresses Suzy, Jisoo, and IU.",
+    "metadata": { "count": "500+", "top_titles": ["Itaewon Class", "Queen Seondeok", "The Woman Who Swallowed the Sun"], "top_actresses": ["Bae Suzy", "Kim Jisoo", "IU (Lee Ji-eun)"] }
+  },
+  {
+    "category": "interests",
+    "sneak_key": "MOTORSPORTS_GAMING",
+    "title": "Formula 1 & Age of Mythology Strategy",
+    "content": "Follows Formula 1 Grand Prix racing closely. Custom strategic scenario and map designer in Age of Mythology (custom triggers, pathing, and unit balance scripting).",
+    "metadata": { "motorsport": "Formula 1 Grand Prix", "gaming": "Age of Mythology Custom Scenario Design" }
+  },
+  {
+    "category": "agent_architecture",
+    "sneak_key": "SHIZUKU_RISH_ANDROID",
+    "title": "Android Zero-Root Execution Engine (Shizuku + rish)",
+    "content": "Zero-root hardware and UI control architecture running locally on POCO C85 Termux under UID 2000 (Shell) via Shizuku and rish. Employs uiautomator dump for sub-second XML node hierarchy parsing (eliminating expensive multimodal OCR), paired with input tap, input text, and screencap -p. Termux API provides direct notifications, SMS interception, battery states, and clipboard reads.",
+    "metadata": { "layer": "Shizuku + rish", "uid": 2000, "ui_parser": "uiautomator dump (XML hierarchy)", "input_control": ["input tap", "input text", "screencap"] }
+  },
+  {
+    "category": "agent_architecture",
+    "sneak_key": "SAFETY_PENDING_LEDGER",
+    "title": "Safety Boundary & Pending Ledger (Human-in-the-Loop)",
+    "content": "High-stakes actions (money transfers, bank interactions, irreversible deletions, device locks) are intercepted before execution and staged in a pending ledger state. Execution strictly halts at biometric authentication and Android FLAG_SECURE boundaries, requiring physical human confirmation on the device.",
+    "metadata": { "mechanism": "Pending Ledger", "protection": "Biometric Authentication / FLAG_SECURE", "human_in_the_loop": true }
+  },
+  {
+    "category": "agent_architecture",
+    "sneak_key": "KEEPALIVE_MATRIX_247",
+    "title": "100% Free Keepalive Matrix (Render + Supabase)",
+    "content": "cron-job.org Job A fires an HTTP ping every 10-12 minutes to the Render backend /internal/ping endpoint. The route responds with 200 OK immediately in-memory with zero DB overhead, keeping Render awake 24/7 without exceeding the 750 free monthly instance hours. Job B executes a lightweight Supabase query once every 24 hours, completely eliminating the 7-day Supabase inactivity database pause rule.",
+    "metadata": { "render_keepalive": "cron-job.org ping every 10-12m to /internal/ping", "supabase_keepalive": "daily query every 24h", "cost": "$0 / month" }
+  }
+]

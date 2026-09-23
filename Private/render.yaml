@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: alicnc-whatsapp-copilot
+    env: node
+    rootDir: whatsapp-bot
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: WHATSAPP_SESSION_BASE64
+        sync: false
+      - key: REPLICATE_API_TOKEN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: LITELLM_API_KEY
+        sync: false
+      - key: LITELLM_BASE_URL
+        sync: false
+      - key: LITELLM_MODEL
+        sync: false

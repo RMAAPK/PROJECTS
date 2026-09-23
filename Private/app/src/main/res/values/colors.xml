@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Official Google Gemini Material Design 3 Tokens -->
+    <color name="bg_dark">#131314</color>
+    <color name="bg_surface">#1E1F20</color>
+    <color name="bg_card">#28292A</color>
+    <color name="border_subtle">#333537</color>
+    <color name="glass_border">#333537</color>
+    <color name="primary">#A8C7FA</color>
+    <color name="primary_dark">#7DA0FA</color>
+    <color name="accent_purple">#D0BCFF</color>
+    <color name="accent_emerald">#6DD58C</color>
+    <color name="accent_amber">#FFD8E4</color>
+    <color name="accent_rose">#F2B8B5</color>
+    <color name="text_primary">#E3E3E3</color>
+    <color name="text_secondary">#C4C7C5</color>
+    <color name="text_muted">#8E918F</color>
+</resources>

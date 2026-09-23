@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Muhammad Ali\\.gemini\\antigravity\\supabase-mcp\\mcp_server.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "SUPABASE_URL": "https://slwehnfipdsnpmgycuwx.supabase.co",
+        "SUPABASE_SERVICE_ROLE_KEY": "REDACTED_SUPABASE_KEY",
+        "SUPABASE_PROJECT_REF": "slwehnfipdsnpmgycuwx"
+      }
+    },
+    "litellm-proxy-models": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Muhammad Ali\\.gemini\\antigravity\\litellm-proxy\\mcp_server.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "REPLICATE_API_TOKEN": "REDACTED_REPLICATE_KEY"
+      }
+    }
+  }
+}
+

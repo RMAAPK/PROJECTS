@@ -1,0 +1,40 @@
+# Android Built binaries
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Gradle build directories
+build/
+*/build/
+.gradle/
+.idea/
+*.iml
+.DS_Store
+
+# Local configuration
+local.properties
+.env
+.env.*
+!.env.example
+
+# Android Studio caches
+.externalNativeBuild
+.cxx/
+captures/
+
+# Keystores
+*.keystore
+*.jks
+keystore/
+!debug.keystore
+
+# Build Temp
+build_temp/
+
+# Node.js & Baileys
+node_modules/
+**/node_modules/
+auth_info_baileys/
+**/auth_info_baileys/
+*.log

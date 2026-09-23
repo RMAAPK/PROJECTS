@@ -1,0 +1,11 @@
+app/
+gradle/
+build/
+.gradle/
+node_modules/
+**/node_modules/
+auth_info_baileys/
+**/auth_info_baileys/
+*.apk
+*.log
+.git
