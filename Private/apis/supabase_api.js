@@ -1,12 +1,12 @@
 /**
  * Supabase PostgREST & Storage API Client
- * Deeply integrates PAI with Supabase (slwehnfipdsnpmgycuwx.supabase.co):
+ * Deeply integrates PAI with Supabase (wfccdwzreyspzewrzjjy.supabase.co):
  * - Real-time system telemetry logging into system_logs
  * - Verified CNC snippets (G-code, canned cycles, cutting mechanics, Kienzle force)
  * - B2B Catalog items and machine specs
  */
 
-const SUPABASE_DEFAULT_URL = process.env.SUPABASE_URL || "https://slwehnfipdsnpmgycuwx.supabase.co";
+const SUPABASE_DEFAULT_URL = process.env.SUPABASE_URL || "https://wfccdwzreyspzewrzjjy.supabase.co";
 const SUPABASE_DEFAULT_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || 
   "REDACTED_SUPABASE_KEY";
 

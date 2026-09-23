@@ -6,7 +6,7 @@ The WhatsApp Copilot daemon is completely self-contained, requiring no local dev
 * **Target Account**: `+92 330 9246239` (Linked & Verified)
 * **Primary Brain**: Replicate AI (`@thealidev` API)
 * **High-Speed Fallback**: Google Gemini 3.6 Flash (`gemini-3.6-flash`)
-* **Knowledge Fabric**: 25 Dossier Nodes (Local) + Supabase (`slwehnfipdsnpmgycuwx.supabase.co`)
+* **Knowledge Fabric**: 25 Dossier Nodes (Local) + Supabase (`wfccdwzreyspzewrzjjy.supabase.co`)
 
 ---
 
@@ -18,7 +18,7 @@ Set these environment variables in your cloud provider (Render, Railway, Fly.io,
 | `WHATSAPP_SESSION_BASE64` | *Contents of `whatsapp_session_base64.txt`* | Full serialized 36-file WhatsApp auth state. Allows zero-pairing instant boot. |
 | `REPLICATE_API_TOKEN` | `REDACTED_REPLICATE_KEY` | Solo Founder Replicate account token |
 | `GEMINI_API_KEY` | `REDACTED_GEMINI_KEY` | Gemini 3.6 Flash key |
-| `SUPABASE_URL` | `https://slwehnfipdsnpmgycuwx.supabase.co` | Supabase Telemetry DB |
+| `SUPABASE_URL` | `https://wfccdwzreyspzewrzjjy.supabase.co` | Supabase Telemetry DB |
 | `SUPABASE_SERVICE_ROLE_KEY` | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` | Full admin key |
 | `LITELLM_API_KEY` | *Your LiteLLM Proxy / API token* | LiteLLM Proxy or OpenAI-compatible token |
 | `LITELLM_BASE_URL` | `https://...` (e.g. `http://localhost:4000`) | LiteLLM Proxy base URL |

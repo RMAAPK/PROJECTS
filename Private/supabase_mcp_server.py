@@ -12,12 +12,12 @@ from typing import Optional, Dict, Any
 from mcp.server.fastmcp import FastMCP
 
 # Supabase Credentials (PAI Master Vault)
-SUPABASE_URL = os.getenv("SUPABASE_URL", "https://slwehnfipdsnpmgycuwx.supabase.co").rstrip("/")
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://wfccdwzreyspzewrzjjy.supabase.co").rstrip("/")
 SUPABASE_SERVICE_ROLE_KEY = os.getenv(
     "SUPABASE_SERVICE_ROLE_KEY",
     "REDACTED_SUPABASE_KEY"
 )
-SUPABASE_PROJECT_REF = os.getenv("SUPABASE_PROJECT_REF", "slwehnfipdsnpmgycuwx")
+SUPABASE_PROJECT_REF = os.getenv("SUPABASE_PROJECT_REF", "wfccdwzreyspzewrzjjy")
 
 mcp = FastMCP("Supabase PAI Sentinel")
 

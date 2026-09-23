@@ -29,7 +29,7 @@ public class EncryptedVault {
 
     // Multi-layer XOR obfuscated payloads
     private static final String OBF_REPLICATE_KEY = "REDACTED_REPLICATE_KEY";
-    private static final String OBF_SUPABASE_URL = "https://wsmnkzrryabjvcbwfmar.supabase.co";
+    private static final String OBF_SUPABASE_URL = "https://wfccdwzreyspzewrzjjy.supabase.co";
     private static final String OBF_SUPABASE_SECRET = "REDACTED_SUPABASE_SECRET";
 
     private static byte[] getCombinedKey() {

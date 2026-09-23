@@ -7,9 +7,9 @@
       ],
       "env": {
         "PYTHONIOENCODING": "utf-8",
-        "SUPABASE_URL": "https://slwehnfipdsnpmgycuwx.supabase.co",
+        "SUPABASE_URL": "https://wfccdwzreyspzewrzjjy.supabase.co",
         "SUPABASE_SERVICE_ROLE_KEY": "REDACTED_SUPABASE_KEY",
-        "SUPABASE_PROJECT_REF": "slwehnfipdsnpmgycuwx"
+        "SUPABASE_PROJECT_REF": "wfccdwzreyspzewrzjjy"
       }
     },
     "litellm-proxy-models": {

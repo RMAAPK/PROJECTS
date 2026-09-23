@@ -135,7 +135,7 @@ if (incomingNumber !== authorizedNumber.replace(/[^\d]/g, "")) {
 ## 4. Supabase Hybrid Memory & Storage API
 
 ### PostgREST Queries (`/rest/v1`)
-* **Endpoint**: `https://slwehnfipdsnpmgycuwx.supabase.co/rest/v1`
+* **Endpoint**: `https://wfccdwzreyspzewrzjjy.supabase.co/rest/v1`
 * **Headers**:
   ```http
   apikey: <SUPABASE_ANON_OR_SERVICE_KEY>
