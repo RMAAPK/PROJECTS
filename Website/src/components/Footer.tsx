@@ -43,8 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToTop }) => {
         {/* Legal & Trademark Credentials */}
         <View style={styles.legalRow}>
           <Text style={styles.legalText}>
-            © 2026 Muhammad Ali. Operating under Registered Trademarks: ALI CNC (Class 42) &amp;
-            AHYEON (Class 9).
+            © 2026 Muhammad Ali. Operating under Registered Trademark: ALI CNC (IPO App: 890258). Registered with FBR (NTN: 3740522733567).
           </Text>
           <Text style={styles.legalText}>
             Officially Registered with Pakistan Software Export Board (PSEB) • Dual TITANS of CNC
@@ -141,3 +140,4 @@ const styles = StyleSheet.create({
     lineHeight: 16,
   },
 });
+

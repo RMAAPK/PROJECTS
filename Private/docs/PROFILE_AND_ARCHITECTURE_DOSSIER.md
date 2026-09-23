@@ -61,8 +61,8 @@
 | Date / Window | Initiative / Application | Core Execution & Details |
 | :--- | :--- | :--- |
 | **June 2026** | TM-01 Trademark Application (ALI CNC) | Filed official Class 42 trademark application with IPO Pakistan covering CAD, 3D modeling, and engineering design services. Formally responded to examination notices in August 2026 (Application No. 890258). |
+| **September 2026** | FBR Official Registration | Ali CNC, Forge AI, and RMAA formally registered with Federal Board of Revenue (CNIC 3740522733567). |
 | **July 2026** | 80 Hexagon Interlocking Nesting | Engineered zero-waste puzzle nesting in Vectric Aspire cutting 80 identical interlocking MDF hexagons on a single sheet. |
-| **July 2026** | TM-01 Trademark Application (AHYEON) | Submitted trademark application with IPO Pakistan under Class 9 for digital media and downloads. |
 | **July 2026** | Lion Head 3D Relief Carving | Generated 3D mesh model using Hunyuan3D-2; engineered multi-layer slicing and toolpaths for 3-axis CNC router execution. |
 | **August 2026** | Functional Inverted V-Carve QR Code | Converted, vectorized, and carved a scannable QR code panel in MDF using Vector Magic Pro, Adobe Illustrator, and Vectric Aspire. |
 | **August 2026** | Municipal Civic Action (CDA / MCI) | Lodged formal civic complaint with Capital Development Authority regarding storm water road flooding outside the Sector F-11 workshop. |
@@ -106,3 +106,6 @@ Summary of the end-to-end private agent system engineered to transition away fro
   * **cron-job.org Job A:** Fires an HTTP ping every 10–12 minutes to Render's `/internal/ping` endpoint. The route responds with `200 OK` immediately in-memory (0 DB dependencies) to keep Render awake 24/7 without exceeding the 750 free instance hours.
   * **cron-job.org Job B:** Triggers a lightweight Supabase query once every 24 hours, completely eliminating the 7-day Supabase inactivity database pause rule.
 * **Development Framework:** Autonomous prototyping and artifact generation managed via Google Antigravity 2.0.
+
+
+

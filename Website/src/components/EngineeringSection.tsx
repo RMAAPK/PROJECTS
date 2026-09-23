@@ -166,7 +166,7 @@ export const EngineeringSection: React.FC = () => {
             <Text style={styles.credIcon}>📜</Text>
             <View>
               <Text style={styles.credTitle}>Registered Trademarks (IPO)</Text>
-              <Text style={styles.credSubtitle}>ALI CNC (Class 42) &amp; AHYEON (Class 9)</Text>
+              <Text style={styles.credSubtitle}>ALI CNC (IPO App: 890258) | FBR Registered</Text>
             </View>
           </View>
 
@@ -361,3 +361,4 @@ const styles = StyleSheet.create({
     color: theme.colors.textMuted,
   },
 });
+
