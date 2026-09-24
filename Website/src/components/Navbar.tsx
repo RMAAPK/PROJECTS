@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onScrollTo }) => {
             <Text style={styles.linkText}>Engineering</Text>
           </Pressable>
           <Pressable onPress={() => onScrollTo('projects')} style={styles.linkItem}>
-            <Text style={[styles.linkText, { color: theme.colors.cyan }]}>RMAA AI (9)</Text>
+            <Text style={[styles.linkText, { color: theme.colors.cyan }]}>RMAA AI (11)</Text>
           </Pressable>
           <Pressable onPress={() => onScrollTo('simulator')} style={styles.linkItem}>
             <Text style={styles.linkText}>Acoustic Lab</Text>

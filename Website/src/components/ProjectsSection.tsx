@@ -102,12 +102,34 @@ export const ProjectsSection: React.FC = () => {
     {
       name: 'RMAA AI Drama Buddy',
       tag: 'Narrative Companion',
-      badge: 'In Queue',
-      badgeColor: theme.colors.amber,
+      badge: 'Active & Verified',
+      badgeColor: theme.colors.emerald,
       desc: 'Asian & Korean drama discussion partner with episode cliffhanger tracking and character arc analysis.',
-      tech: ['Dialogue LLM', 'Episode Recaps', 'Character Lore'],
+      tech: ['React Native', 'Supabase', 'Python Scraper'],
       actions: [
         { label: 'View Spec', url: 'https://github.com/RMAAPK/PROJECTS/tree/main/Drama%20Buddy' },
+      ],
+    },
+    {
+      name: 'RMAA AI SVGVPlayer',
+      tag: 'Video Animation Engine',
+      badge: 'Active & Verified',
+      badgeColor: theme.colors.emerald,
+      desc: 'Ultra-lightweight vector video playback system using Expo and React Native SVG, rendering real-time animated frames from encoded JSON payloads.',
+      tech: ['React Native', 'Expo', 'SVG Animation'],
+      actions: [
+        { label: 'View Spec', url: 'https://github.com/RMAAPK/PROJECTS/tree/main/SVGVPlayer' },
+      ],
+    },
+    {
+      name: 'RMAA AI VectorVision',
+      tag: 'Video to Vector AI Pipeline',
+      badge: 'Active & Verified',
+      badgeColor: theme.colors.emerald,
+      desc: 'Node.js backend with Replicate AI vision models to trace and encode MP4 videos into highly compressed JSON vector sequences.',
+      tech: ['Node.js', 'Replicate AI', 'pgvector'],
+      actions: [
+        { label: 'View Spec', url: 'https://github.com/RMAAPK/PROJECTS/tree/main/VectorVision_Node' },
       ],
     },
   ];
