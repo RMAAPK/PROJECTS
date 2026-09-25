@@ -1,4 +1,4 @@
-declare module 'react-native' {
+﻿declare module 'react-native' {
   import * as React from 'react';
 
   export interface ViewProps {
@@ -32,6 +32,7 @@ declare module 'react-native' {
   export const Text: React.FC<TextProps>;
   export const Pressable: React.FC<PressableProps>;
   export const ScrollView: React.FC<ScrollViewProps>;
+  export const Image: React.FC<any>;
   export const StyleSheet: {
     create: <T extends Record<string, any>>(styles: T) => T;
   };
@@ -39,3 +40,9 @@ declare module 'react-native' {
 }
 
 declare module 'react-native-web';
+
+
+declare module '*.svg' {
+  const content: string;
+  export default content;
+}
