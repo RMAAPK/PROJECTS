@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import confetti from 'canvas-confetti';
 import { theme } from '../theme';
@@ -78,8 +78,17 @@ export const ContactSection: React.FC = () => {
           >
             <Text style={styles.channelIcon}>💬</Text>
             <Text style={styles.channelName}>WhatsApp Direct</Text>
-            <Text style={styles.channelLink}>+92 344 0708494</Text>
+            <Text style={styles.channelLink}>RMAA: +92 330 9246239</Text>
+            <Text style={styles.channelLink}>Ali CNC: +92 344 0708494</Text>
             <Text style={styles.channelDesc}>Direct messaging, urgent machine queries, and shop notes.</Text>
+          </Pressable>
+
+          {/* Founder <-> Enterprise Bridge */}
+          <Pressable onPress={() => openUrl('https://alicnc.pk')} style={styles.channelCard}>
+            <Text style={styles.channelIcon}>?</Text>
+            <Text style={styles.channelName}>Ali CNC - Official Enterprise</Text>
+            <Text style={styles.channelLink}>Visit alicnc.pk</Text>
+            <Text style={styles.channelDesc}>My company's home. CAD/CAM automation, custom tooling, and AI-driven CNC architecture.</Text>
           </Pressable>
 
           {/* GitHub Profiles */}
@@ -248,3 +257,4 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
 });
+

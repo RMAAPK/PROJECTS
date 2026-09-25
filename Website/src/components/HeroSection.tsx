@@ -27,6 +27,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <View style={styles.paxelBadge}>
             <Text style={styles.paxelBadgeText}>YC Paxel Verified (0 Reverts)</Text>
           </View>
+          <View style={[styles.paxelBadge, { borderColor: '#ffd700', backgroundColor: 'rgba(255, 215, 0, 0.1)' }]}>
+            <Text style={[styles.paxelBadgeText, { color: '#ffd700' }]}>🏆 5x Tech Briefs 2026 Finalist</Text>
+          </View>
         </View>
 
         {/* Main Punchline Header */}
