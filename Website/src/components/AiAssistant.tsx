@@ -26,7 +26,7 @@ export const AiAssistant: React.FC = () => {
       if (data.id) {
         // Poll for completion
         const poll = setInterval(async () => {
-          const pollRes = await fetch(/api/chat/);
+          const pollRes = await fetch('/api/chat/' + data.id);
           const pollData = await pollRes.json();
           if (pollData.reply) {
             clearInterval(poll);
@@ -184,3 +184,4 @@ const styles = StyleSheet.create({
   },
   sendBtnText: { color: '#090A0F', fontWeight: '900' }
 });
+

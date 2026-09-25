@@ -459,7 +459,72 @@ app.listen(PORT, HOST, () => {
   // Launch the autonomous 10-minute Render self-ping keep-alive
   startKeepAliveSentinel();
   
-  // Launch the Private AI service from the Private folder
+  // ==========================================
+// AI ASSISTANT EDGE API (Replicate + Supabase)
+// ==========================================
+app.post('/api/chat', async (req, res) => {
+  try {
+    const { message } = req.body;
+    if (!message) return res.status(400).json({ error: 'Message required' });
+
+    const REPLICATE_API_TOKEN = process.env.REPLICATE_API_TOKEN ;
+    const response = await fetch('https://api.replicate.com/v1/models/meta/meta-llama-3-70b-instruct/predictions', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Token ' + REPLICATE_API_TOKEN,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        input: {
+          prompt: 'You are Muhammad Ali proxy. Professional. User: ' + message + '\nAI:',
+          max_new_tokens: 150
+        }
+      })
+    });
+    
+    const replicateData = await response.json();
+    
+    const SUPABASE_URL = process.env.SUPABASE_URL ;
+    const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY ;
+    if (SUPABASE_URL && SUPABASE_KEY) {
+      await fetch(SUPABASE_URL + '/rest/v1/ai_chat_logs', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ user_message: message, timestamp: new Date().toISOString() })
+      }).catch(e => console.error('[Supabase Log Error]', e));
+    }
+
+    res.json({ status: 'pending', id: replicateData.id });
+  } catch (error) {
+    console.error('[AI Chat Error]', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.get('/api/chat/:id', async (req, res) => {
+  try {
+    const REPLICATE_API_TOKEN = process.env.REPLICATE_API_TOKEN ;
+    const response = await fetch('https://api.replicate.com/v1/predictions/' + req.params.id, {
+      headers: { 'Authorization': 'Token ' + REPLICATE_API_TOKEN }
+    });
+    const data = await response.json();
+    if (data.status === 'succeeded') {
+      res.json({ reply: data.output.join('') });
+    } else if (data.status === 'failed') {
+      res.status(500).json({ error: 'AI generation failed' });
+    } else {
+      res.json({ status: data.status });
+    }
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to poll AI' });
+  }
+});
+
+// Launch the Private AI service from the Private folder
   startPrivateAI();
 });
 
@@ -483,6 +548,9 @@ function startPrivateAI() {
     console.warn('[Private AI] Could not find bot.js at ' + botPath + '. Skipping Private AI boot.');
   }
 }
+
+
+
 
 
 
