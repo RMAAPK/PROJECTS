@@ -1,5 +1,6 @@
 ﻿import React from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
+import logoUrl from '../assets/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { theme } from '../theme';
 
@@ -19,7 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onScrollTo }) => {
       <View style={styles.navInner}>
         {/* Brand / Name */}
         <Pressable onPress={() => onScrollTo('hero')} style={styles.brand}>
-          <View style={styles.spindleDot} />
+          <Image source={{ uri: logoUrl }} style={{ width: 28, height: 28 }} resizeMode="contain" />
           <Text style={styles.brandText}>
             Muhammad <Text style={styles.brandHighlight}>Ali</Text>
           </Text>
@@ -212,5 +213,6 @@ const styles = StyleSheet.create({
     fontFamily: theme.fonts.mono,
   },
 });
+
 
 
