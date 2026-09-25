@@ -1,0 +1,15 @@
+﻿{
+  "nav": {
+    "projects": "프로젝트 (Projects)",
+    "origins": "기원 (Origins)",
+    "contact": "연락처 (Contact)",
+    "simulator": "시뮬레이터 (Simulator)"
+  },
+  "hero": {
+    "tagline": "1인 창업자 및 CNC 시스템 아키텍트",
+    "punchline_1": "안녕하세요,",
+    "punchline_2": "복싱 글러브를 낀 사람이 아닙니다. 저는",
+    "punchline_3": "산업용 스핀들과 씨름하고, 실시간 음향 AI를 구축하여 카바이드 공구 파손을",
+    "punchline_4": "내에 방지하며 무한 해상도 기하학적 소프트웨어 아키텍처를 설계합니다."
+  }
+}

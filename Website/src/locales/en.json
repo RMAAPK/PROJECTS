@@ -1,0 +1,15 @@
+﻿{
+  "nav": {
+    "projects": "Projects",
+    "origins": "Origins",
+    "contact": "Contact",
+    "simulator": "Simulator"
+  },
+  "hero": {
+    "tagline": "SOLO FOUNDER & CNC SYSTEMS ARCHITECT",
+    "punchline_1": "Hi, I'm",
+    "punchline_2": "No, not the one with boxing gloves. The one who wrestles",
+    "punchline_3": "industrial spindles, builds real-time acoustic AI to stop carbide tool breakage in",
+    "punchline_4": ", and designs infinite-resolution geometric software architectures."
+  }
+}
