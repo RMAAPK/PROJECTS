@@ -1,5 +1,6 @@
-import React from 'react';
+﻿import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { theme } from '../theme';
 
 interface HeroSectionProps {
@@ -13,6 +14,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onOpenEmail,
   onLaunchSimulator,
 }) => {
+  const { t } = useTranslation();
   return (
     <View style={styles.heroWrapper} id="hero">
       <View style={styles.heroContainer}>
@@ -322,3 +324,4 @@ const styles = StyleSheet.create({
     display: 'flex',
   },
 });
+

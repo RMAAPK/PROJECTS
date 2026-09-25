@@ -1,5 +1,6 @@
-import React from 'react';
+﻿import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { theme } from '../theme';
 
 interface NavbarProps {
@@ -7,6 +8,8 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onScrollTo }) => {
+  const { t, i18n } = useTranslation();
+  const changeLang = (lng: string) => i18n.changeLanguage(lng);
   const openEmail = () => {
     window.location.href = 'mailto:say@rmaa.pk';
   };
@@ -31,10 +34,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onScrollTo }) => {
             <Text style={styles.linkText}>The Two Alis</Text>
           </Pressable>
           <Pressable onPress={() => onScrollTo('origin')} style={styles.linkItem}>
-            <Text style={styles.linkText}>Origin Story</Text>
+            <Text style={styles.linkText}>{t('nav.origins') || 'Origin Story'}</Text>
           </Pressable>
           <Pressable onPress={() => onScrollTo('engineering')} style={styles.linkItem}>
-            <Text style={styles.linkText}>Engineering</Text>
+            <Text style={styles.linkText}>{t('nav.projects') || 'Engineering'}</Text>
           </Pressable>
           <Pressable onPress={() => onScrollTo('projects')} style={styles.linkItem}>
             <Text style={[styles.linkText, { color: theme.colors.cyan }]}>RMAA AI (11)</Text>
@@ -54,6 +57,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onScrollTo }) => {
             <Text style={styles.linkText}>Terminal</Text>
           </Pressable>
         </View>
+
+                  {/* Lang Switcher */}
+          <View style={{ flexDirection: 'row', gap: 6, marginRight: 12 }}>
+            <Pressable onPress={() => changeLang('en')}><Text style={{ color: i18n.language === 'en' ? '#38BDF8' : '#9CA3AF', fontSize: 12, fontWeight: '700' }}>EN</Text></Pressable>
+            <Pressable onPress={() => changeLang('ko')}><Text style={{ color: i18n.language === 'ko' ? '#38BDF8' : '#9CA3AF', fontSize: 12, fontWeight: '700' }}>KO</Text></Pressable>
+            <Pressable onPress={() => changeLang('ur')}><Text style={{ color: i18n.language === 'ur' ? '#38BDF8' : '#9CA3AF', fontSize: 12, fontWeight: '700' }}>UR</Text></Pressable>
+          </View>
 
         {/* Right CTA */}
         <View style={styles.ctaGroup}>
@@ -202,3 +212,5 @@ const styles = StyleSheet.create({
     fontFamily: theme.fonts.mono,
   },
 });
+
+
