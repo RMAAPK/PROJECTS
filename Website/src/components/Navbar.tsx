@@ -11,6 +11,10 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onScrollTo }) => {
   const { t, i18n } = useTranslation();
   const changeLang = (lng: string) => i18n.changeLanguage(lng);
+  const toggleTheme = () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+  };
   const openEmail = () => {
     window.location.href = 'mailto:say@rmaa.pk';
   };
@@ -59,7 +63,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onScrollTo }) => {
           </Pressable>
         </View>
 
-                  {/* Lang Switcher */}
+                            {/* Theme Switcher */}
+          <Pressable onPress={toggleTheme} style={{ marginRight: 16, justifyContent: 'center' }}>
+            <Text style={{ fontSize: 16 }}>🌓</Text>
+          </Pressable>
+
+          {/* Lang Switcher */}
           <View style={{ flexDirection: 'row', gap: 6, marginRight: 12 }}>
             <Pressable onPress={() => changeLang('en')}><Text style={{ color: i18n.language === 'en' ? '#38BDF8' : '#9CA3AF', fontSize: 12, fontWeight: '700' }}>EN</Text></Pressable>
             <Pressable onPress={() => changeLang('ko')}><Text style={{ color: i18n.language === 'ko' ? '#38BDF8' : '#9CA3AF', fontSize: 12, fontWeight: '700' }}>KO</Text></Pressable>
@@ -213,6 +222,7 @@ const styles = StyleSheet.create({
     fontFamily: theme.fonts.mono,
   },
 });
+
 
 
 

@@ -1,21 +1,21 @@
-export const theme = {
+﻿export const theme = {
   colors: {
-    bg: '#090A0F',
-    bgCard: '#11131B',
-    bgCardHover: '#161924',
-    border: '#1E2230',
-    borderLight: '#2B3145',
-    cyan: '#38BDF8',
-    cyanGlow: 'rgba(56, 189, 248, 0.15)',
-    emerald: '#10B981',
-    emeraldGlow: 'rgba(16, 185, 129, 0.15)',
-    violet: '#A855F7',
-    violetGlow: 'rgba(168, 85, 247, 0.15)',
-    amber: '#F59E0B',
-    rose: '#F43F5E',
-    textPrimary: '#F3F4F6',
-    textSecondary: '#9CA3AF',
-    textMuted: '#6B7280',
+    bg: 'var(--bg)',
+    bgCard: 'var(--bgCard)',
+    bgCardHover: 'var(--bgCardHover)',
+    border: 'var(--border)',
+    borderLight: 'var(--borderLight)',
+    cyan: 'var(--cyan)',
+    cyanGlow: 'var(--cyanGlow)',
+    emerald: 'var(--emerald)',
+    emeraldGlow: 'var(--emeraldGlow)',
+    violet: 'var(--violet)',
+    violetGlow: 'var(--violetGlow)',
+    amber: 'var(--amber)',
+    rose: 'var(--rose)',
+    textPrimary: 'var(--textPrimary)',
+    textSecondary: 'var(--textSecondary)',
+    textMuted: 'var(--textMuted)',
   },
   fonts: {
     heading: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
@@ -28,3 +28,4 @@ export const theme = {
     full: 9999,
   },
 };
+

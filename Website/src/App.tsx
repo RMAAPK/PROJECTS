@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { theme } from './theme';
 import { Navbar } from './components/Navbar';
@@ -11,6 +11,7 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { PersonalLifeSection } from './components/PersonalLifeSection';
 import { BlogSection } from './components/BlogSection';
 import { TerminalDialogue } from './components/TerminalDialogue';
+import { AiAssistant } from './components/AiAssistant';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
@@ -110,7 +111,8 @@ export const App: React.FC = () => {
         <ContactSection />
 
         <Footer onScrollToTop={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
-      </ScrollView>
+        <AiAssistant />
+    </ScrollView>
     </View>
   );
 };
@@ -127,3 +129,4 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
