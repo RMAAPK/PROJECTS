@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { theme } from '../theme';
 
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   cultureCard: {
-    width: '48.5%' as any,
+    minWidth: 320, flex: 1,
     backgroundColor: theme.colors.bgCard,
     borderWidth: 1,
     borderColor: theme.colors.border,
@@ -374,3 +374,4 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
 });
+

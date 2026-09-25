@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+﻿import React, { useState, useMemo, useEffect } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import confetti from 'canvas-confetti';
 import { theme } from '../theme';
@@ -565,7 +565,7 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   articleCard: {
-    width: '48.5%' as any,
+    minWidth: 320, flex: 1,
     backgroundColor: theme.colors.bgCard,
     borderWidth: 1,
     borderColor: theme.colors.border,
@@ -848,3 +848,4 @@ const styles = StyleSheet.create({
     fontFamily: theme.fonts.mono,
   },
 });
+

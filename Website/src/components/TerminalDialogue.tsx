@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { theme } from '../theme';
 
@@ -55,7 +55,7 @@ export const TerminalDialogue: React.FC = () => {
         res = `IDENTITY: Raja Muhammad Ali Asghar (Muhammad Ali)
 BORN: Dec 24, 2003 (Age 22), Rawalpindi & Islamabad, Pakistan
 ROLES: Solo Founder & CEO, CNC Systems Architect, Full-Stack Engineer
-ORGANIZATIONS: Ali CNC (alicnc.pk) & Ali CNC Forge AI (forge.alicnc.pk)
+ORGANIZATIONS: Ali CNC (alicnc.pk) [Registered TM01 - Official Brand] & Ali CNC Forge AI (forge.alicnc.pk)
 INTELLECT: INTJ • Estimated IQ 150+ • 100% Conventional Commits, 0 Reverts`;
         break;
 
@@ -97,7 +97,7 @@ INTERVENTION TIME: < 5ms Win32 WM_KEYDOWN VK_NEXT (drops feed 100% -> 25%)`;
       case 'biases':
         res = `ULTIMATE BIASES:
   1. BIBI (Kim Hyung-seo) — Raw authenticity, razor-sharp lyricism, unmatched edge.
-  2. Jung Ahyeon (BABYMONSTER) — All-rounder vocalist/rapper, namesake of trademark AHYEON.
+  2. Jung Ahyeon (BABYMONSTER) — All-rounder vocalist/rapper,.
 OTHER BIASES: Jennie (2nd bias), Lisa, Rosé, Jisoo.
 GROUPS: BABYMONSTER, BLACKPINK, ILLIT, LE SSERAFIM, TWICE, NewJeans, IVE.`;
         break;
@@ -397,3 +397,4 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 });
+

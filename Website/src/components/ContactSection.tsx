@@ -91,6 +91,14 @@ export const ContactSection: React.FC = () => {
             <Text style={styles.channelDesc}>My company's home. CAD/CAM automation, custom tooling, and AI-driven CNC architecture.</Text>
           </Pressable>
 
+          {/* Forge AMK Bridge */}
+          <Pressable onPress={() => openUrl('https://forgeamk.com')} style={styles.channelCard}>
+            <Text style={styles.channelIcon}>🔥</Text>
+            <Text style={styles.channelName}>Forge AMK</Text>
+            <Text style={styles.channelLink}>Visit forgeamk.com</Text>
+            <Text style={styles.channelDesc}>Acoustic AI integrations and advanced manufacturing systems deployed globally.</Text>
+          </Pressable>
+
           {/* GitHub Profiles */}
           <Pressable
             onPress={() => openUrl('https://github.com/thealidev')}
@@ -226,7 +234,7 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   channelCard: {
-    width: '48.5%' as any,
+    minWidth: 320, flex: 1,
     backgroundColor: theme.colors.bgCard,
     borderWidth: 1,
     borderColor: theme.colors.border,
@@ -257,4 +265,6 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
 });
+
+
 

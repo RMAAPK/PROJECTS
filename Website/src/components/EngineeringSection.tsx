@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { theme } from '../theme';
 
@@ -166,7 +166,7 @@ export const EngineeringSection: React.FC = () => {
             <Text style={styles.credIcon}>📜</Text>
             <View>
               <Text style={styles.credTitle}>Registered Trademarks (IPO)</Text>
-              <Text style={styles.credSubtitle}>ALI CNC (IPO App: 890258) | FBR Registered</Text>
+              <Text style={styles.credSubtitle}><Text style={{fontWeight: '900', color: theme.colors.emerald}}>ALI CNC (TM01) - OFFICIAL BRAND</Text> (IPO App: 890258) | FBR Registered</Text>
             </View>
           </View>
 
@@ -361,4 +361,5 @@ const styles = StyleSheet.create({
     color: theme.colors.textMuted,
   },
 });
+
 
