@@ -468,7 +468,7 @@ app.post('/api/chat', async (req, res) => {
     if (!message) return res.status(400).json({ error: 'Message required' });
 
     const REPLICATE_API_TOKEN = process.env.REPLICATE_API_TOKEN ;
-    const response = await fetch('https://api.replicate.com/v1/models/meta/meta-llama-3-70b-instruct/predictions', {
+    const response = await fetch(("https://api.replicate.com/v1/models/" + (process.env.REPLICATE_MODEL || "deepseek-ai/deepseek-v3.1") + "/predictions"), {
       method: 'POST',
       headers: {
         'Authorization': 'Token ' + REPLICATE_API_TOKEN,
@@ -548,6 +548,7 @@ function startPrivateAI() {
     console.warn('[Private AI] Could not find bot.js at ' + botPath + '. Skipping Private AI boot.');
   }
 }
+
 
 
 
