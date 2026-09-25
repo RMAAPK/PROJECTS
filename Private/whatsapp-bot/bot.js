@@ -256,6 +256,12 @@ async function startBot() {
 
   try {
     console.log("[Engine] Initializing Baileys state for", TARGET_PHONE_NUMBER);
+
+    if (!fs.existsSync(path.join(AUTH_DIR, "creds.json")) && process.env.WHATSAPP_SESSION_BASE64) {
+      console.log("[Engine] Restoring session from environment variable (WHATSAPP_SESSION_BASE64)...");
+      restoreSession(process.env.WHATSAPP_SESSION_BASE64, AUTH_DIR);
+    }
+
     const { state, saveCreds } = await useMultiFileAuthState(AUTH_DIR);
 
     const sock = makeWASocket({
