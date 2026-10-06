@@ -14,8 +14,6 @@ import { TerminalDialogue } from './components/TerminalDialogue';
 import { AiAssistant } from './components/AiAssistant';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-import { LiteLLMPage } from './components/LiteLLMPage';
-
 export const App: React.FC = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
