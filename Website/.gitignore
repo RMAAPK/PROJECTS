@@ -6,6 +6,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
-
+.env.local
+.env.development
+.env.test
+.env.production
 *.gguf
-.env
+build/
+coverage/

@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { theme } from './theme';
 import { Navbar } from './components/Navbar';
@@ -14,6 +14,7 @@ import { TerminalDialogue } from './components/TerminalDialogue';
 import { AiAssistant } from './components/AiAssistant';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { LiteLLMPage } from './components/LiteLLMPage';
 
 export const App: React.FC = () => {
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);

@@ -1,4 +1,5 @@
 services:
+  # ── Main Website (rmaa.pk) ──────────────────
   - type: web
     name: muhammad-ali-personal-website
     env: node
@@ -11,3 +12,41 @@ services:
         value: production
       - key: PORT
         value: 10000
+
+  # ── Ali CNC LiteLLM Proxy ──────────────────
+  - type: web
+    name: ali-cnc-litellm-proxy
+    runtime: image
+    image:
+      url: ghcr.io/berriai/litellm:main-stable
+    plan: free
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: LITELLM_MASTER_KEY
+        generateValue: true
+      - key: LITELLM_CONFIG_PATH
+        value: /app/litellm_config.yaml
+      # Replicate
+      - key: REPLICATE_API_TOKEN
+        sync: false
+      # OpenAI
+      - key: OPENAI_API_KEY
+        sync: false
+      # Google Gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      # Anthropic
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      # Groq
+      - key: GROQ_API_KEY
+        sync: false
+      # Together AI
+      - key: TOGETHER_API_KEY
+        sync: false
+      # RunPod
+      - key: RUNPOD_API_KEY
+        sync: false
+      - key: RUNPOD_BASE_URL
+        sync: false
