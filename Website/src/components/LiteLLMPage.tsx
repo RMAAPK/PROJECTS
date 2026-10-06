@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: theme.colors.text,
+    color: theme.colors.textPrimary,
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
-    color: theme.colors.muted || '#888',
+    color: theme.colors.textMuted,
     textAlign: 'center',
   },
 });
