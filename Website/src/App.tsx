@@ -17,103 +17,126 @@ import { Footer } from './components/Footer';
 import { LiteLLMPage } from './components/LiteLLMPage';
 
 export const App: React.FC = () => {
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
 
   // Initialize slug from URL (e.g. /blog/some-slug or ?article=some-slug)
-  useEffect(() => {
-    const parseSlugFromLocation = () => {
-      const pathname = window.location.pathname;
-      if (pathname.startsWith('/blog/')) {
-        const slug = pathname.replace('/blog/', '').replace(/\/$/, '');
-        if (slug) return slug;
-      }
-      const params = new URLSearchParams(window.location.search);
-      const articleParam = params.get('article');
-      if (articleParam) return articleParam;
+  const parseSlugFromLocation = () => {
+    const pathname = window.location.pathname;
+    if (pathname.startsWith('/blog/')) {
+      const slug = pathname.replace('/blog/', '').replace(/\/$/, '');
+      if (slug) return slug;
+    }
+    const params = new URLSearchParams(window.location.search);
+    const articleParam = params.get('article');
+    if (articleParam) return articleParam;
 
-      if (window.location.hash.startsWith('#blog-')) {
-        return window.location.hash.replace('#blog-', '');
-      }
-
-      return null;
-    };
-
-    const initial = parseSlugFromLocation();
-    if (initial) {
-      setSelectedSlug(initial);
-      setTimeout(() => {
-        const el = document.getElementById('blog');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 300);
+    if (window.location.hash.startsWith('#blog-')) {
+      return window.location.hash.replace('#blog-', '');
     }
 
+    return null;
+  };
+
+  useEffect(() => {
+    const initialSlug = parseSlugFromLocation();
+    setSelectedSlug(initialSlug);
+
     const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
       setSelectedSlug(parseSlugFromLocation());
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  const navigateTo = (path: string) => {
+    window.history.pushState({}, '', path);
+    setCurrentPath(path);
+    if (!path.startsWith('/blog/')) {
+        setSelectedSlug(null);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleSelectArticle = (slug: string | null) => {
     setSelectedSlug(slug);
     if (slug) {
       window.history.pushState({}, '', `/blog/${slug}`);
-      setTimeout(() => {
-        const el = document.getElementById('blog');
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
+      setCurrentPath(`/blog/${slug}`);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      window.history.pushState({}, '', '/#blog');
+      window.history.pushState({}, '', '/blog');
+      setCurrentPath('/blog');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const scrollToSection = (id: string) => {
-    if (id === 'blog' && selectedSlug) {
-      // Return to blog list if user clicks Blog in nav
-      setSelectedSlug(null);
-      window.history.pushState({}, '', '/#blog');
+    if (id === 'blog') {
+      navigateTo('/blog');
+      return;
     }
+    
+    // If we're on the blog page and trying to scroll to a home section, go home first
+    if (currentPath.startsWith('/blog')) {
+      navigateTo('/');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+      return;
+    }
+
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
+  const isBlogPage = currentPath.startsWith('/blog');
+
   return (
     <View style={styles.appRoot}>
       <Navbar onScrollTo={scrollToSection} />
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <HeroSection
-          onExplore={() => scrollToSection('engineering')}
-          onOpenEmail={() => (window.location.href = 'mailto:say@rmaa.pk')}
-          onLaunchSimulator={() => scrollToSection('simulator')}
-        />
+        {isBlogPage ? (
+          <View style={{ paddingTop: 80, paddingBottom: 40, flex: 1 }}>
+            <BlogSection
+              selectedSlug={selectedSlug}
+              onSelectArticle={handleSelectArticle}
+            />
+          </View>
+        ) : (
+          <>
+            <HeroSection
+              onExplore={() => scrollToSection('engineering')}
+              onOpenEmail={() => (window.location.href = 'mailto:say@rmaa.pk')}
+              onLaunchSimulator={() => scrollToSection('simulator')}
+            />
 
-        <HumorCompare />
+            <HumorCompare />
 
-        <OriginStorySection />
+            <OriginStorySection />
 
-        <AcousticSimulator />
+            <AcousticSimulator />
 
-        <EngineeringSection />
+            <EngineeringSection />
 
-        <ProjectsSection />
+            <ProjectsSection />
 
-        <PersonalLifeSection />
+            <PersonalLifeSection />
 
-        <BlogSection
-          selectedSlug={selectedSlug}
-          onSelectArticle={handleSelectArticle}
-        />
+            <TerminalDialogue />
 
-        <TerminalDialogue />
-
-        <ContactSection />
+            <ContactSection />
+          </>
+        )}
 
         <Footer onScrollToTop={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
         <AiAssistant />
-    </ScrollView>
+      </ScrollView>
     </View>
   );
 };
@@ -130,4 +153,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
