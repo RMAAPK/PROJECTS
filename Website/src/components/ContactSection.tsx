@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import confetti from 'canvas-confetti';
 import { theme } from '../theme';
@@ -91,13 +91,6 @@ export const ContactSection: React.FC = () => {
             <Text style={styles.channelDesc}>My company's home. CAD/CAM automation, custom tooling, and AI-driven CNC architecture.</Text>
           </Pressable>
 
-          {/* Forge AMK Bridge */}
-          <Pressable onPress={() => openUrl('https://forgeamk.com')} style={styles.channelCard}>
-            <Text style={styles.channelIcon}>🔥</Text>
-            <Text style={styles.channelName}>Forge AMK</Text>
-            <Text style={styles.channelLink}>Visit forgeamk.com</Text>
-            <Text style={styles.channelDesc}>Acoustic AI integrations and advanced manufacturing systems deployed globally.</Text>
-          </Pressable>
 
           {/* GitHub Profiles */}
           <Pressable
